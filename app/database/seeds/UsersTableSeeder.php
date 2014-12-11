@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder {
 		{
 			User::create([
                 "username" => $faker->name,
-                "email" => $faker->email
+                "email" => $faker->email,
+                "age" => rand(20,60)
 			]);
 		}
 	}

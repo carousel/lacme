@@ -22,11 +22,25 @@ class HomeController extends BaseController {
     }
 	public function index()
 	{
+        //$reflect = new ReflectionClass($user);
+        //$users = User::all();
+        //foreach ($users as $user) {
+            //echo ($user->getAttributes()["email"]);
+        //}
+        DB::listen(function($sql){
+            print_r($sql); echo "<br>"; 
+        });
+        $db = DB::table("users")
+            ->leftJoin("comments","users.id","=","comments.id")
+            ->limit(3)
+            ->get();
+        dd($db);
+        //$username = DB::table("users")->where("username","Hellen Maggio")->pluck('username');
+        //$username = DB::table("users")->select("username")->where('age','>','33')->get();
+        //$log = DB::getQueryLog();
+        //print_r($log);
+        //dd($username);
 
-        $posts = Post::all();
-        foreach ($posts as $post) {
-            echo $post->post . "<hr>";
-        }
 
         
 	}
