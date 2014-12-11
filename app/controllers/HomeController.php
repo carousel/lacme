@@ -23,9 +23,9 @@ class HomeController extends BaseController {
 	public function index()
 	{
 
-        $comments = Comment::all();
-        foreach ($comments as $comment) {
-            echo $comment->comment . "<br>";
+        $posts = Post::all();
+        foreach ($posts as $post) {
+            echo $post->post . "<hr>";
         }
 
         
