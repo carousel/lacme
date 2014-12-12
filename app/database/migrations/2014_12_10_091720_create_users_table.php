@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->integer('age')->nullable();
 			$table->integer('post_id')->nullable();
 			$table->integer('comment_id')->nullable();
+            $table->softDeletes();
 			$table->timestamps();
 		});
 	}
