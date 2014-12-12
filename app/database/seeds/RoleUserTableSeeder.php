@@ -7,6 +7,7 @@ class RoleUserTableSeeder extends Seeder {
 
 	public function run()
 	{
+        DB::statement("set foreign_key_checks = 0");
         RoleUser::truncate();
 		//$faker = Faker::create();
 
