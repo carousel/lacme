@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Response;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,4 +10,10 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get("/","HomeController@index");
+//Route::get("/","HomeController@index");
+Route::get("/",function(){
+    $role = Role::find(1);
+    dd($role->role);
+});
+
+
