@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
 .env.*.php
+.env.local.php
+.env.testing.php
 .env.php
 tags
 /.idea

@@ -1,5 +1,4 @@
 <?php
-use Illuminate\Http\Response;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,10 +9,15 @@ use Illuminate\Http\Response;
 | and give it the Closure to execute when that URI is requested.
 |
 */
-//Route::get("/","HomeController@index");
 Route::get("/",function(){
-    $role = Role::find(1);
-    dd($role->role);
+        //$user = new User;
+        $path = (new ReflectionClass("Str"))->getFileName();
+        //$func = (new ReflectionFunction("array_map"))->getNumberOfParameters();
+        var_dump($path);
+        //dd(get_declared_classes());
 });
+
+//Route::get("/","RemindersController@getRemind");
+//Route::post("postRemind","RemindersController@postRemind");
 
 
